@@ -1,25 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class projected_player : MonoBehaviour
+namespace VRSwapper
 {
 
-  public Transform Cam;
-  public Transform Feet;
+  public class projected_player : MonoBehaviour
+  {
 
-  // Use this for initialization
-  void Start ()
-  {
-    
-  }
-  
-  // Update is called once per frame
-  void Update ()
-  {
-    if (Cam != null && Feet != null)
+    public Transform Cam;
+    public Transform Feet;
+
+    // Use this for initialization
+    void Start()
     {
-      Feet.position = new Vector3(Cam.position.x, 0.0f, Cam.position.z);
-    }	
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      if (Cam != null && Feet != null)
+      {
+        Feet.position = new Vector3(Cam.position.x, 0.0f, Cam.position.z);
+      }
+    }
+
   }
 
 }

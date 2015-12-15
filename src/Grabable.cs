@@ -1,37 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Grabable : MonoBehaviour
+namespace VRSwapper
 {
 
-	// Use this for initialization
-	void Start ()
+  public class Grabable : MonoBehaviour
   {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-  {
-	
-	}
 
-  void OnTriggerEnter(Collider col)
-  {
-    VRGrabber grabber = col.gameObject.GetComponent<VRGrabber>();
-    if (grabber != null)
+    // Use this for initialization
+    void Start()
     {
-      grabber.OnInteractEnter(this);
-    }
-  }
 
-  void OnTriggerExit(Collider col)
-  {
-    VRGrabber grabber = col.gameObject.GetComponent<VRGrabber>();
-    if (grabber != null)
-    {
-      grabber.OnInteractExit(this);
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
   }
 
 }
